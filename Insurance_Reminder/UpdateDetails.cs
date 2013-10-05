@@ -93,6 +93,7 @@ namespace Insurance_Reminder
             dateDisplay.Text = insurance.Due_Date;
             pickfreq.Text = insurance.Frequency;
             insuranceID = insurance.ID;
+            
         }
         protected override Dialog OnCreateDialog(int id)
         {

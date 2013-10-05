@@ -74,6 +74,7 @@ namespace Insurance_Reminder
             this.Company_Name = parcel.ReadString();
             this.Premium_Amount = parcel.ReadString();
             this.Due_Date = parcel.ReadString();
+            this.Frequency = parcel.ReadString();
         }
 
         public int DescribeContents()
@@ -88,6 +89,7 @@ namespace Insurance_Reminder
             dest.WriteString(Company_Name);
             dest.WriteString(Premium_Amount);
             dest.WriteString(Due_Date);
+            dest.WriteString(Frequency);
         }
 
         // Closest to the 'Java' way of implementing the creator
