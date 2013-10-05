@@ -5,7 +5,6 @@
     android:layout_height="fill_parent">
 <!--Company Name text box-->
     <EditText
-        android:text="@string/Enter_Company_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtCompanyName"
@@ -13,10 +12,10 @@
 <!--Premium Amount text box-->
     <EditText
         android:inputType="number"
-        android:text="@string/Enter_Premium_Amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtPremiumAmount" />
+        android:id="@+id/txtPremiumAmount"
+        android:hint="@string/Enter_Premium_Amount" />
     <TextView
         android:id="@+id/dateDisplay"
         android:layout_width="wrap_content"
