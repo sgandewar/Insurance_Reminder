@@ -20,6 +20,9 @@ namespace Insurance_Reminder
         TextView lblReadonlyCompanyName;
         TextView txtReadonlyPremiumAmount;
         TextView txtReadonlyDueDate;
+        Button btnUpdate;
+        Button btnDeleteTask;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -30,61 +33,54 @@ namespace Insurance_Reminder
             lblReadonlyCompanyName = FindViewById<TextView>(Resource.Id.lblReadonlyCompanyName);
             txtReadonlyPremiumAmount = FindViewById<TextView>(Resource.Id.txtReadonlyPremiumAmount);
             txtReadonlyDueDate = FindViewById<TextView>(Resource.Id.txtReadonlyDueDate);
+            btnDeleteTask = FindViewById<Button>(Resource.Id.btnDeleteTask);
+            btnUpdate = FindViewById<Button>(Resource.Id.btnUpdate);
 
             //lblReadonlyID.Text = insurance.ID.ToString();
             lblReadonlyCompanyName.Text = insurance.Company_Name.ToString();
             txtReadonlyPremiumAmount.Text = insurance.Premium_Amount.ToString();
             txtReadonlyDueDate.Text = insurance.Due_Date.ToString();
+            btnUpdate.Click += btnUpdate_Click;
+            btnDeleteTask.Click += btnDeleteTask_Click;
         }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
+        void btnDeleteTask_Click(object sender, EventArgs e)
         {
-            var MenuItemUpdate = menu.Add(0, 1, 1, Resource.String.UpdateDetails);
-            var MenuItemDelete = menu.Add(0, 2, 2, Resource.String.Delete);
-            MenuItemUpdate.SetIcon(Resource.Drawable.Update);
-            MenuItemDelete.SetIcon(Resource.Drawable.delete);
-            return true;
+            var builder = new AlertDialog.Builder(this);
+            builder.SetMessage(Resource.String.ShowDeleteConfirmationMessage);
+            builder.SetPositiveButton(Resource.String.DialogYesButton, DialogYesButtonClicked);
+            builder.SetNegativeButton(Resource.String.DialogNoButton, DialogNoButtonClicked);
+            builder.Show();
         }
 
-        public override bool OnOptionsItemSelected(IMenuItem item)
+        void btnUpdate_Click(object sender, EventArgs e)
         {
-            switch (item.ItemId)
-            {
-                case 1:
-                    var intent = new Intent(this, typeof(UpdateDetails));
-                    intent.PutExtra("UpdateObject", insurance);
-                    StartActivity(intent);
-                    this.Finish();
-                    return true;
-
-                case 2:
-                    bool bflag = DeleteReminder();
-                    if (bflag)
-                    {
-                        StartActivity(typeof(MainScreen));
-                        this.Finish();
-                        return true;
-                    }
-                    else
-                        return false;
-            
-                default:
-                    return base.OnOptionsItemSelected(item);
-            }
+            var intent = new Intent(this, typeof(UpdateDetails));
+            intent.PutExtra("UpdateObject", insurance);
+            StartActivity(intent);
+            this.Finish();
         }
 
-        protected bool DeleteReminder()
+        private void DialogYesButtonClicked(object sender, DialogClickEventArgs args)
         {
-            bool brtnVal = false;
             try
             {
                 InsuranceDataSource insuranceDataSource = new InsuranceDataSource(this);
-                brtnVal = insuranceDataSource.DeleteInsuranceReminder(insurance);
+                if (insuranceDataSource.DeleteInsuranceReminder(insurance))
+                {
+                    StartActivity(typeof(MainScreen));
+                    this.Finish();
+                }
             }
             catch (Exception ex)
             {
+                ex.ToString();
             }
-            return brtnVal;
+        }
+
+        private void DialogNoButtonClicked(object sender, DialogClickEventArgs args)
+        {
+
         }
     }
 }
