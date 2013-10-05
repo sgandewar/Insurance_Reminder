@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string-array name="list_dialog_items">
+    <item>One Time</item>
+    <item>Weekly</item>
+    <item>Monthly</item>
+    <item>Quaterly</item>
+    <item>Half-yearly</item>
+    <item>Anually</item>
+  </string-array>
+</resources>

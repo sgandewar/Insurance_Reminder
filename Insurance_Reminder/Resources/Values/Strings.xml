@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">InsuranceReminder</string>
+  <string name="lblNoData_Text">No Data found</string>
+  <string name="Button_New_Text">New Task</string>
+  <string name="Enter_Company_Name">Enter comapny name</string>
+  <string name="Enter_Premium_Amount">Enter Premium Amount</string>
+  <string name="Button_Add_Text">Add New Task</string>
+  <string name="Button_ShowAll_Text">Show all Tasks</string>
+  <string name="date">Please select date</string>
+  <string name="time">Please select time</string>
+  <string name="strPremiumAmount">Premium Amount</string>
+  <string name="strCompanyName">Company Name</string>
+  <string name="strDueDate">Due Date</string>
+  <string name="strID">ID</string>
+  <string name="Select_Date">Please select date</string>
+  <string name="Select_Time">Please select time</string>
+  <string name="UpdateDetails">Update Details</string>
+  <string name="Button_Delete_Text">Delete Details</string>
+  <string name="Close">Close</string>
+  <string name="Button_Update_Text">Update Task</string>
+  <string name="ShowDeleteConfirmationMessage">Are you sure you want to delete?</string>
+  <string name="DialogYesButton">Yes</string>
+  <string name="DialogNoButton">No</string>
+  <string name="Options">Options</string>
+<string name="Delete">Delete</string>
+</resources>

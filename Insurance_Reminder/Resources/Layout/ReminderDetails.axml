@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dip">
+<!--<TextView
+        android:id="@+id/lblReadonlyID"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:text="@string/strID"
+        android:textColor="@android:color/white" />-->
+    <TextView
+        android:text="@string/strCompanyName"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:id="@+id/lblReadonlyCompanyName"
+        android:gravity="center" />
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayoutReadonly">
+        <TableRow
+            android:id="@+id/tableRowPremiumAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/strPremiumAmount"
+                android:layout_column="0"
+                android:id="@+id/lblReadonlyPremiumAmount"
+                android:layout_weight="1"
+                android:layout_height="50dip"
+                android:gravity="center_vertical" />
+            <TextView
+                android:text="Text"
+                android:layout_column="1"
+                android:id="@+id/txtReadonlyPremiumAmount"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="50dip" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRowDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/strDueDate"
+                android:layout_column="0"
+                android:id="@+id/lblReadonlyDueDate"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="50dip" />
+            <TextView
+                android:text="Text"
+                android:layout_column="1"
+                android:id="@+id/txtReadonlyDueDate"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="50dip" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
