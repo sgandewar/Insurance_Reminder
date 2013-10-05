@@ -4,7 +4,7 @@
   <string name="ApplicationName">InsuranceReminder</string>
   <string name="lblNoData_Text">No Data found</string>
   <string name="Button_New_Text">New Task</string>
-  <string name="Enter_Company_Name">Enter comapny name</string>
+  <string name="Enter_Company_Name">Enter company name</string>
   <string name="Enter_Premium_Amount">Enter Premium Amount</string>
   <string name="Button_Add_Text">Add New Reminder</string>
   <string name="Button_ShowAll_Text">Show all Tasks</string>
