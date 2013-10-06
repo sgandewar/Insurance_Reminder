@@ -94,11 +94,20 @@ namespace Insurance_Reminder
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060013
+			public const int ad = 2131099667;
+			
 			// aapt resource value: 0x7f060009
 			public const int btnAddTask = 2131099657;
 			
+			// aapt resource value: 0x7f06001e
+			public const int btnDeleteTask = 2131099678;
+			
 			// aapt resource value: 0x7f060011
 			public const int btnNew = 2131099665;
+			
+			// aapt resource value: 0x7f06001d
+			public const int btnUpdate = 2131099677;
 			
 			// aapt resource value: 0x7f060002
 			public const int dateDisplay = 2131099650;
@@ -124,20 +133,20 @@ namespace Insurance_Reminder
 			// aapt resource value: 0x7f06000f
 			public const int lblPremiumAmount = 2131099663;
 			
-			// aapt resource value: 0x7f060014
-			public const int lblReadonlyCompanyName = 2131099668;
+			// aapt resource value: 0x7f060015
+			public const int lblReadonlyCompanyName = 2131099669;
 			
-			// aapt resource value: 0x7f06001a
-			public const int lblReadonlyDueDate = 2131099674;
+			// aapt resource value: 0x7f06001b
+			public const int lblReadonlyDueDate = 2131099675;
 			
-			// aapt resource value: 0x7f060017
-			public const int lblReadonlyPremiumAmount = 2131099671;
+			// aapt resource value: 0x7f060018
+			public const int lblReadonlyPremiumAmount = 2131099672;
 			
 			// aapt resource value: 0x7f06000e
 			public const int list_image = 2131099662;
 			
-			// aapt resource value: 0x7f060013
-			public const int lstViewMain = 2131099667;
+			// aapt resource value: 0x7f060014
+			public const int lstViewMain = 2131099668;
 			
 			// aapt resource value: 0x7f060003
 			public const int pickDate = 2131099651;
@@ -151,14 +160,14 @@ namespace Insurance_Reminder
 			// aapt resource value: 0x7f060008
 			public const int relativeLayoutButtons = 2131099656;
 			
-			// aapt resource value: 0x7f060015
-			public const int tableLayoutReadonly = 2131099669;
-			
-			// aapt resource value: 0x7f060019
-			public const int tableRowDueDate = 2131099673;
-			
 			// aapt resource value: 0x7f060016
-			public const int tableRowPremiumAmount = 2131099670;
+			public const int tableLayoutReadonly = 2131099670;
+			
+			// aapt resource value: 0x7f06001a
+			public const int tableRowDueDate = 2131099674;
+			
+			// aapt resource value: 0x7f060017
+			public const int tableRowPremiumAmount = 2131099671;
 			
 			// aapt resource value: 0x7f06000a
 			public const int thumbnail = 2131099658;
@@ -172,11 +181,11 @@ namespace Insurance_Reminder
 			// aapt resource value: 0x7f060001
 			public const int txtPremiumAmount = 2131099649;
 			
-			// aapt resource value: 0x7f06001b
-			public const int txtReadonlyDueDate = 2131099675;
+			// aapt resource value: 0x7f06001c
+			public const int txtReadonlyDueDate = 2131099676;
 			
-			// aapt resource value: 0x7f060018
-			public const int txtReadonlyPremiumAmount = 2131099672;
+			// aapt resource value: 0x7f060019
+			public const int txtReadonlyPremiumAmount = 2131099673;
 			
 			static Id()
 			{

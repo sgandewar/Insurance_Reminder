@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insurance_Reminder", "Insurance_Reminder\Insurance_Reminder.csproj", "{C001632A-8DC1-4536-9BFF-7052CF04722F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdMob", "AdMob\AdMob.csproj", "{74B48A13-31DC-40C1-958F-F2979FD0C59D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C001632A-8DC1-4536-9BFF-7052CF04722F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C001632A-8DC1-4536-9BFF-7052CF04722F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C001632A-8DC1-4536-9BFF-7052CF04722F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{74B48A13-31DC-40C1-958F-F2979FD0C59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B48A13-31DC-40C1-958F-F2979FD0C59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B48A13-31DC-40C1-958F-F2979FD0C59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B48A13-31DC-40C1-958F-F2979FD0C59D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

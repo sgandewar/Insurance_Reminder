@@ -1,3 +1,5 @@
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Com.Google.Ads;
+
+
 
 namespace Insurance_Reminder
 {
@@ -20,6 +25,8 @@ namespace Insurance_Reminder
         List<InsuranceReminderBO> listOfInsurance = new List<InsuranceReminderBO>();
         ListView listView;
         int selectedPosition;
+        AdView adView;
+         
         protected override void OnCreate(Bundle bundle)
         {
 
@@ -28,6 +35,7 @@ namespace Insurance_Reminder
                 base.OnCreate(bundle);
 
                 SetContentView(Resource.Layout.Main);
+                
                 btnAddNew = FindViewById<Button>(Resource.Id.btnNew);
                 lblNoData = FindViewById<TextView>(Resource.Id.lblNoData);
                 listView = FindViewById<ListView>(Resource.Id.lstViewMain);
@@ -35,12 +43,6 @@ namespace Insurance_Reminder
                 RegisterForContextMenu(listView);
 
                 btnAddNew.Click += btnAddNew_Click;
-                InsuranceReminderBO i = new InsuranceReminderBO();
-                i.ID = 1;
-                i.Company_Name = "Test1";
-                i.Premium_Amount = "100";
-                i.Due_Date = DateTime.Now.ToShortDateString();
-                listOfInsurance.Add(i);
                 listOfInsurance = GetAllReminders(this);
                 if (listOfInsurance.Count.Equals(0))
                     lblNoData.Visibility = ViewStates.Visible;
@@ -50,6 +52,21 @@ namespace Insurance_Reminder
                     listView.Adapter = new CustomListAdapter(this, listOfInsurance);
                     listView.ItemClick += listView_ItemClick;
                 }
+
+                // Create an ad.
+                adView = FindViewById<AdView>(Resource.Id.ad);
+
+                // Create an ad request.
+                AdRequest adRequest = new AdRequest();
+                adRequest.SetTesting(true);
+
+                adRequest.AddTestDevice(AdRequest.TestEmulator);
+                // If you're trying to show ads on device, use this.
+                // The device ID to test will be shown on adb log.
+                // adRequest.AddTestDevice (some_device_id);
+
+                // Start loading the ad in the background.
+                adView.LoadAd(adRequest);
             }
             catch (Exception ex)
             {

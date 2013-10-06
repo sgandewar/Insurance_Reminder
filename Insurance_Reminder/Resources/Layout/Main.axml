@@ -14,6 +14,12 @@
         android:id="@+id/lblNoData"
         android:text="@string/lblNoData_Text"
         android:visibility="gone" />
+    <com.google.ads.AdView xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:id="@+id/ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adUnitId="a150f75121e018d"
+        ads:adSize="BANNER" />
     <ListView
         android:id="@+id/lstViewMain"
         android:layout_width="fill_parent"
